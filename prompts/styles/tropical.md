@@ -1,0 +1,1 @@
+Add a tropical summer vibe with bright flowers, palm leaves, sunglasses, and warm lighting.

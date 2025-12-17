@@ -7,7 +7,7 @@ import UploadArea from './components/UploadArea';
 import ImageCanvas from './components/ImageCanvas';
 import StyleSelector from './components/StyleSelector';
 import LandingPage from './components/LandingPage';
-import { StickerJob, ProcessingStatus, STYLES } from './types';
+import { StickerJob, ProcessingStatus, FAITHFUL_STYLE } from './types';
 import { generateSticker } from './services/geminiService';
 
 const MAX_BATCH_SIZE = 6;
@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const [apiKey, setApiKey] = useState('');
   const [mode, setMode] = useState<'single' | 'batch'>('single');
   const [jobs, setJobs] = useState<StickerJob[]>([]);
-  const [selectedStyle, setSelectedStyle] = useState(STYLES[0]);
+  const [selectedStyle, setSelectedStyle] = useState(FAITHFUL_STYLE);
   const [activeJobIndex, setActiveJobIndex] = useState<number>(0);
   const [isProcessing, setIsProcessing] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);

@@ -1,0 +1,1 @@
+Automatically identify the main salient subject of the image and isolate it.

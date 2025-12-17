@@ -1,0 +1,1 @@
+Transform into a Studio Ghibli anime style with lush details, whimsical character design, and vibrant colors.

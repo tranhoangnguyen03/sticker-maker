@@ -9,6 +9,7 @@ export enum ProcessingStatus {
 export interface StickerStyle {
   id: string;
   name: string;
+  // For 'custom' style, this holds the user input. For presets, this is unused/empty as it is loaded from files.
   promptModifier: string;
   previewColor: string;
 }
@@ -23,35 +24,65 @@ export interface StickerJob {
   error?: string;
 }
 
-export const STYLES: StickerStyle[] = [
-  { 
-    id: 'faithful', 
-    name: 'Faithful', 
-    promptModifier: 'Keep the style photorealistic and faithful to the original image.',
-    previewColor: 'bg-slate-500' 
+export const FAITHFUL_STYLE: StickerStyle = { 
+  id: 'faithful', 
+  name: 'Faithful', 
+  promptModifier: '', // Loaded from prompts/styles/faithful.md
+  previewColor: 'bg-slate-500' 
+};
+
+export const ARTISTIC_STYLES: StickerStyle[] = [
+  {
+    id: 'pixar',
+    name: 'Pixar 3D',
+    promptModifier: '', // Loaded from prompts/styles/pixar.md
+    previewColor: 'bg-blue-500'
   },
-  { 
-    id: 'cartoon', 
-    name: 'Cartoon', 
-    promptModifier: 'Transform into a vibrant, 2D vector cartoon style with bold lines.',
-    previewColor: 'bg-orange-400' 
+  {
+    id: 'pixel',
+    name: 'Pixel Art',
+    promptModifier: '', // Loaded from prompts/styles/pixel.md
+    previewColor: 'bg-purple-500'
   },
-  { 
-    id: 'pixel', 
-    name: 'Pixel Art', 
-    promptModifier: 'Transform into a retro 16-bit pixel art style.',
-    previewColor: 'bg-purple-500' 
+  {
+    id: 'watercolor',
+    name: 'Watercolor',
+    promptModifier: '', // Loaded from prompts/styles/watercolor.md
+    previewColor: 'bg-pink-400'
   },
-  { 
-    id: 'watercolor', 
-    name: 'Watercolor', 
-    promptModifier: 'Transform into a soft, artistic watercolor painting style.',
-    previewColor: 'bg-blue-400' 
-  },
-  { 
-    id: 'cyberpunk', 
-    name: 'Cyberpunk', 
-    promptModifier: 'Transform into a futuristic cyberpunk style with neon glows.',
-    previewColor: 'bg-pink-600' 
-  },
+  {
+    id: 'ghibli',
+    name: 'Ghibli',
+    promptModifier: '', // Loaded from prompts/styles/ghibli.md
+    previewColor: 'bg-green-500'
+  }
 ];
+
+export const THEMATIC_STYLES: StickerStyle[] = [
+  {
+    id: 'christmas',
+    name: 'Christmas',
+    promptModifier: '', // Loaded from prompts/styles/christmas.md
+    previewColor: 'bg-red-600'
+  },
+  {
+    id: 'lunar_new_year',
+    name: 'Lunar New Year',
+    promptModifier: '', // Loaded from prompts/styles/lunar_new_year.md
+    previewColor: 'bg-yellow-500'
+  },
+  {
+    id: 'tropical',
+    name: 'Tropical',
+    promptModifier: '', // Loaded from prompts/styles/tropical.md
+    previewColor: 'bg-orange-400'
+  },
+  {
+    id: 'medieval',
+    name: 'Medieval',
+    promptModifier: '', // Loaded from prompts/styles/medieval.md
+    previewColor: 'bg-stone-600'
+  }
+];
+
+export const CUSTOM_STYLE_ID = 'custom';

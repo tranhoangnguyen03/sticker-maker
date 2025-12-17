@@ -18,7 +18,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-purple-600">Custom Stickers</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-          Create high-quality, die-cut stickers from your images in seconds using the power of Google's Gemini 3 Pro Vision.
+          Create high-quality, die-cut stickers from your images in seconds using the power of Google's latest image generative model.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
            Warning: Paid API Key Required
         </h3>
         <p className="text-amber-700 dark:text-amber-300 text-sm">
-          This app uses the high-quality <strong>Gemini 3 Pro</strong> model. You will need a personal Google Cloud API Key with billing enabled to generate stickers. 
+          This app uses the latest and high-quality <strong>Gemini Image</strong> model. You will need a personal Google Cloud API Key with billing enabled to generate stickers. 
         </p>
       </div>
 
@@ -66,7 +66,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
       <div className="pt-12 border-t border-slate-200 dark:border-slate-800 w-full max-w-4xl text-center space-y-6">
         <div>
             <p className="text-slate-900 dark:text-white font-medium mb-2">
-            Created by David Tran
+            Created by Nguyen H. Tran
             </p>
             <p className="text-slate-500 dark:text-slate-400 text-sm">
             Reach out for feature requests!
