@@ -1,0 +1,5 @@
+{
+  "name": "Sticker-maker",
+  "description": "Turn your photos into custom die-cut stickers using Gemini Pro Vision. Supports batch processing and manual subject selection.",
+  "requestFramePermissions": []
+}
